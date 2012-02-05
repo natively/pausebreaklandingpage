@@ -1,3 +1,68 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray: #555;
+$page-width: 960px;
+
+body
+{
+	background:black;
+	font-size:100%;
+}
+
+#header
+{
+	width: $page-width;
+	margin: 150px auto;
+	font-size: 50px;
+	font-family: Courier new;
+	font-weight: bold;
+	color: #fff;
+	text-align:	 center;
+	text-shadow: 0px 0px 50px #0FA;
+}
+
+#content
+{
+	width: $page-width;
+	height:212px;
+	margin-left:auto;
+	margin-right:auto;
+	.link_block
+	{
+		h2
+		{
+			text-align: center;
+		}
+		&:hover
+		{
+			background-color: lighten( $gray, 10% );
+		}
+		.inner
+		{
+			display:none;
+			margin:1em;
+		}
+		cursor:pointer;
+		width: 230px;
+		float: left;
+		background-color: $gray;
+		color: white;
+		font-family: Arial, Helvetica;
+		font-weight: normal !important;
+		font-size:0.8em;
+		margin:0px 5px;
+		border-radius: 10px;
+	}
+}
+
+#footer
+{
+	font-family: Courier new;
+	width: $page-width;
+	margin-left: auto;
+	margin-right: auto;
+	color:white;
+	text-align:center;
+}
