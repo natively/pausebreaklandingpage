@@ -1,0 +1,32 @@
+// Mixins for some defaults fonts:
+$default_font: "Helvetica-Neue", "Arial", "Helvetica", Sans-serif;
+$header_font: "Helvetica-Neue", "Arial", "Helvetica", Sans-serif;
+$paragraph_font: "Helvetica-Neue", "Arial", "Helvetica", Sans-serif;
+
+// Normalize font size to browser defaults;  for most browsers this is 16px. Specify default font;
+body {
+  font-size: 100%;
+  font-family: $default_font
+}
+
+// Specify size scale for headers
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.8em; }
+
+// Specify style and font for headers
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header_font;
+  font-weight: bold;
+  padding: 0.5em 0em;
+}
+
+// Specify some defaults for paragraph text
+p { font-size: 0.8em; font-family: $paragraph_font; line-height: 1.5em; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+// Specify some defaults for lists
+ul, ol, li {}

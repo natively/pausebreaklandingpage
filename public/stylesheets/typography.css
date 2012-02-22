@@ -1,0 +1,54 @@
+/* line 7, ../../app/assets/stylesheets/typography.scss */
+body {
+  font-size: 100%;
+  font-family: "Helvetica-Neue", "Arial", "Helvetica", Sans-serif;
+}
+
+/* line 13, ../../app/assets/stylesheets/typography.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 14, ../../app/assets/stylesheets/typography.scss */
+h2 {
+  font-size: 1.5em;
+}
+
+/* line 15, ../../app/assets/stylesheets/typography.scss */
+h3 {
+  font-size: 1.2em;
+}
+
+/* line 16, ../../app/assets/stylesheets/typography.scss */
+h4 {
+  font-size: 1em;
+}
+
+/* line 17, ../../app/assets/stylesheets/typography.scss */
+h5 {
+  font-size: 0.8em;
+}
+
+/* line 20, ../../app/assets/stylesheets/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica-Neue", "Arial", "Helvetica", Sans-serif;
+  font-weight: bold;
+  padding: 0.5em 0em;
+}
+
+/* line 27, ../../app/assets/stylesheets/typography.scss */
+p {
+  font-size: 0.8em;
+  font-family: "Helvetica-Neue", "Arial", "Helvetica", Sans-serif;
+  line-height: 1.5em;
+}
+
+/* line 28, ../../app/assets/stylesheets/typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 29, ../../app/assets/stylesheets/typography.scss */
+strong {
+  font-weight: bold;
+}
