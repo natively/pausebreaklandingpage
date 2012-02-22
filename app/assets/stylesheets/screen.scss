@@ -1,0 +1,130 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+@import "blueprint/grid";
+
+@import "compass/css3/gradient";
+
+@import "compass/css3/border-radius";
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+}
+
+form.bp {
+  @include blueprint-form;
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  @include blueprint-scaffolding; }
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body.two-col {
+  #container {
+    @include container; }
+  #header, #footer {
+    @include column($blueprint-grid-columns); }
+  #sidebar {
+    // One third of the grid columns, rounding down. With 24 cols, this is 8.
+    $sidebar-columns: floor($blueprint-grid-columns / 3);
+    @include column($sidebar-columns); }
+  #content {
+    // Two thirds of the grid columns, rounding up.
+    // With 24 cols, this is 16.
+    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
+    // true means it's the last column in the row
+    @include column($content-columns, true); } }
+
+
+// # LAYOUTS #
+body {
+  background-color: #333;
+}
+.home {
+  color: #fff;
+  background-color: #000;
+  #header {
+    background-color: #004;
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    width: 100%;
+    z-index: 2;
+    height: 45px;
+    @include linear-gradient(color-stops(#004,#003));
+    ul { list-style: none; position: absolute; bottom: 0px; right: 0px; }
+    li { float: right; }
+    a { 
+
+      font-size: 1.5em;
+      padding: 10px;
+      border-left: 1px #fff dotted;
+    }
+  }
+  #middle {
+    #bglayer {
+      background-image: url('gridtrans.png');
+      background-repeat: repeat;
+      z-index:1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    background-image: url('bggrad.png');
+    background-repeat: repeat;
+    z-index: 0;
+    #container {
+      height: 700px;
+      @include container;
+      #logo {
+        background-image: url('pblogo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 350px;
+      }
+      #tagline {
+        h1, h2 {
+          color: #fff;
+        }
+        text-align: center;
+      }
+      #features {
+        h3 { color: #ddd; }
+        ul { list-style: none; }
+        li {
+          width: 185px;
+          height: 200px;
+          margin: 5px;
+          padding: 15px;
+          display: block;
+          background-color: #000;
+          @include border-radius(12px, 12px);
+          float: left;
+        }
+      }
+    }
+  }
+  #footer {
+    background-color: #333;
+    text-align: center;
+  }
+}

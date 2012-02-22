@@ -1,0 +1,131 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray: #333;
+$page-width: 960px;
+
+body {
+	height: 1000px;
+	//background: lighten(black,10%);
+	postition: relative;
+	background: rgb(63,63,63); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(63,63,63,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(63,63,63,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(63,63,63,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(63,63,63,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(63,63,63,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(63,63,63,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3f3f', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+
+
+}
+#header {
+	height: 250px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	box-shadow: 0px 0px 50px #000;
+	margin: 50px auto 0px auto;	
+	background-color: black;
+	#headerbg {
+		height: 250px;
+		width: 100%;
+		margin: auto;
+		position: absolute;
+		background-image: url('grid2.png');
+		background-position: center;
+		opacity: 0.2;
+		z-index: 1;
+	}
+	#headertext {
+			#logo {
+				font-size: 5em;
+			}
+			#quote {
+				font-family: "Georgia";
+				font-size: 1.2em;
+				color: #ddd;
+				width: 600px;
+				margin: auto;
+				text-align: right;
+				padding: 1em;
+				font-weight: normal;
+			}
+		vertical-align: middle;
+		margin: 60px auto;
+		height: 100px;
+		font-family: Courier New;
+		font-weight: bold;
+		color: #fff;
+		text-align:	 center;
+		text-shadow: 0px 0px 10px #555, 0px 0px 50px #fff, 0px 0px 100px #000;
+	}
+}
+
+#content {
+	height: 500px;
+	margin: 0 auto;
+	//background-color: black;
+	text-align: center;
+	.row {
+		//position: relative;
+		margin: 1em auto;
+		padding: 1em;
+		max-width: 860px;
+		overflow: hidden;
+		.leftcol {
+			text-align: left;
+			width: 400px;
+			color: white;
+			float: left;
+			padding: 1em;
+			font-size: 1.3em;
+		}
+		.rightcol {
+			color: blue;
+			background-color: black;
+			display: block;
+			width: 398px;
+			height: 200px;
+			float: left;
+			border: 1px solid white;	
+		}
+	}
+	.link_blocks {
+		margin: 0 auto;
+		text-align: center;
+		width: 1000px;
+		.link_block	{
+			h3 {
+				text-align: center;
+			}
+			&:hover	{
+				background-color: lighten($gray, 10%);
+			}
+			.inner	{
+				font-size: 0.8em;
+				//display: none;
+				margin: 1em;
+			}
+			cursor: pointer;
+			width: 210px;
+			margin: 0 5px;
+			height: 150px;
+			display: inline-table;
+			background-color: $gray;
+			color: white;
+			border-radius: 7px;
+			opacity: 0.75;
+		}
+	}
+}
+
+#footer {
+	font-family: Courier new;
+	margin: 0px auto;
+	font-size: 0.8em;
+	width: $page-width;
+	color: white;
+	text-align: center;
+}
