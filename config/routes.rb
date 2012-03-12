@@ -1,4 +1,12 @@
 Pausebreaklandingpage::Application.routes.draw do
+
+  match '/' => "static_pages#home", :as => :home
+  match '/contact' => "static_pages#contact", :as => :contact
+
+  get "static_pages/home"
+  get "static_pages/contact"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

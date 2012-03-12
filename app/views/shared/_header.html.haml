@@ -1,0 +1,12 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{ "data-toggle" => "collapse", "data-target" => ".nav-collapse"}
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand pause\\break
+      .nav-collapse
+        %ul.nav
+          = nav_link "Home", home_path
+          = nav_link "Contact", contact_path
+          
