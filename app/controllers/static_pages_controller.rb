@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    @potential_client = PotentialClient.new
   end
 end

@@ -2,6 +2,7 @@ Pausebreaklandingpage::Application.routes.draw do
 
   match '/' => "static_pages#home", :as => :home
   match '/contact' => "static_pages#contact", :as => :contact
+  match '/potential_clients' => "potential_clients#create", :as => :potential_clients
 
   get "static_pages/home"
   get "static_pages/contact"
