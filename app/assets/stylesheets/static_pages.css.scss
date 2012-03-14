@@ -12,5 +12,10 @@ body {
   padding-bottom: 40px;
 }
 
+
 @import "bootstrap";
 @import "bootstrap-responsive";
+
+textarea {
+  height: 10em;
+}

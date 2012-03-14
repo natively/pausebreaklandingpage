@@ -15,7 +15,8 @@
       %h2 Have a special project in mind?
       %p How can we help your business?
       %p
-        = link_to "Contact Us »", contact_path, :class => "btn btn-primary btn-large"
+        = link_to raw( "<i class='icon-envelope icon-white'></i> Contact Us" ), contact_path, :class => "btn btn-primary btn-large"
+
   .row
     .span2
       = image_tag "heroku-logo-light-234x60.png"

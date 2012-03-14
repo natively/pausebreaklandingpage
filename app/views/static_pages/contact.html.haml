@@ -1,18 +1,17 @@
 - provide(:title, 'Contact Us')
 
 .container  
-  .row
-    .span6.offset4
-      %h2 We'd love to hear from you.
-      = form_for @potential_client do |f|
-        = f.label :name
-        = f.text_field :name
-        = f.label :email
-        = f.text_field :email
-        = f.label :phone
-        = f.text_field :phone
-        = f.label :project_description, "Briefly describe your project:"
-        = f.text_area :project_description
-        .submit
-          %button{ "type" => "submit", "class" => "btn btn-primary" }
-            Contact Us
+  %h2 We'd love to hear from you.
+  = form_for @potential_client do |f|
+    = f.label :name
+    = f.text_field :name
+    = f.label :email
+    = f.text_field :email
+    = f.label :phone
+    = f.text_field :phone
+    = f.label :project_description, "Briefly describe your project:"
+    = f.text_area :project_description
+    .submit
+      %button{ "type" => "submit", "class" => "btn btn-primary" }
+        %i.icon-envelope.icon-white
+        Contact Us
