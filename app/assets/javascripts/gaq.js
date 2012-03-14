@@ -1,3 +1,5 @@
+// Google Analytics --- no touching!!
+
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-30020146-1']);
 _gaq.push(['_trackPageview']);
