@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  def contact
+  def home
     @potential_client = PotentialClient.new
   end
 end

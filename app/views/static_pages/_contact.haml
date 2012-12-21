@@ -1,0 +1,25 @@
+%h2#contact We'd love to hear from you.
+%form{'accept-charset'=>'UTF-8', :action=>'/potential_clients',
+      :class=>'form-horizontal', :method=>'post'}
+  %span.help-block
+    Fill out this simple form, we're ready to work with you!
+  .control-group
+    %label.control-label{:for=>'name'} Name
+    .controls
+      %input#name{:type=>'text', :name=>'potential_client[name]'}
+  .control-group
+    %label.control-label{:for=>'email'} Email
+    .controls
+      %input#email{:type=>'text', :name=>'potential_client[email]'}
+  .control-group
+    %label.control-label{:for=>'phone'} Phone
+    .controls
+      %input#phone{:type=>'text', :name=>'potential_client[phone]'}
+  .control-group
+    %label.control-label{:for=>'description'} Message
+    .controls
+      %textarea#description{:name=>'potential_client[project_description]'}
+  .control-group
+    .controls
+      %button#submit{ "type" => "submit", "class" => "btn btn-primary" }
+        Contact Us

@@ -1,11 +1,12 @@
 !!!
 %html
   %head
-    %title= full_title(yield :title)
+    %title Pause||Break
     = stylesheet_link_tag "application", :media => "all"
     = csrf_meta_tags
-  %body
+  %body{'data-spy'=>'scroll', 'data-target'=>'#site-nav', 'data-offset'=> '36'}
     = render 'shared/header'
-    = yield
+    .container
+      = yield
     = render 'shared/footer'
     = javascript_include_tag "application"

@@ -1,4 +1,4 @@
-.navbar.navbar-fixed-top
+#site-nav.navbar.navbar-inverse.navbar-fixed-top
   .navbar-inner
     .container
       %a.btn.btn-navbar{ "data-toggle" => "collapse", "data-target" => ".nav-collapse"}
@@ -8,7 +8,10 @@
         = image_tag("pb36trans.png")
       .nav-collapse
         %ul.nav
-          = nav_link "Home", home_path
-          = nav_link "About", about_path
-          = nav_link "Contact", contact_path
-          
+          %li
+            %a{:href=>'#pitch'} Home
+          %li
+            %a{:href=>'#about'} About
+          %li
+            %a{:href=>'#contact'} Contact
+
