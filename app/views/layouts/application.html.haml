@@ -4,7 +4,7 @@
     %title Pause||Break
     = stylesheet_link_tag "application", :media => "all"
     = csrf_meta_tags
-  %body{'data-spy'=>'scroll', 'data-target'=>'#site-nav', 'data-offset'=> '36'}
+  %body{'data-spy'=>'scroll', 'data-target'=>'#site-nav'}
     = render 'shared/header'
     .container
       = yield
