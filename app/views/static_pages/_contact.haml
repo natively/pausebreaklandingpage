@@ -4,7 +4,7 @@
     %h3 Contact Us
     %h5 Fill out this simple form, we're ready to work with you!
 .row-fluid
-  %form.span6.well{'accept-charset'=>'UTF-8', :action=>'/potential_clients',
+  %form#contact-form.span6.well{'accept-charset'=>'UTF-8', :action=>'/potential_clients',
         :class=>'form-horizontal', :method=>'post'}
     .control-group
       %label.control-label{:for=>'name'} Name

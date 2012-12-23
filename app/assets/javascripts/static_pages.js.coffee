@@ -8,8 +8,8 @@ $('#submit').on('click', (e) ->
       'potential_client[project_description]': $('#description').val()
     }
     , (data) ->
-      # should show an error
-      console.log(data)
+      document.getElementById('contact-form').reset()
+      alert('Thank you! We will be in touch soon. :-) ')
   )
   false
 )
